@@ -1,4 +1,4 @@
-# Design System Index
+# Index
 
 > ⚠️ **AI Instructions:** Before implementing any UI, consult this index first.
 > Do NOT guess component usage. Navigate to the relevant `.md` file and read it fully before writing code.
@@ -202,7 +202,9 @@ Quick reference — details in `foundations/motion.md`
 
 ```
 your-repo/
-├── DESIGN_SYSTEM.md          ← You are here (AI reads this FIRST)
+├── INDEX.md                  ← You are here (AI reads this FIRST)
+├── MAINTENANCE.md            ← Guide for updating indexes
+├── component.template.md     ← Template for new components
 ├── .cursorrules              ← Cursor AI instructions
 ├── .claude/
 │   └── rules.md              ← Claude AI instructions
@@ -218,7 +220,6 @@ your-repo/
 │   └── ...
 └── components/
     └── ui/
-        ├── _component.template.md  ← Template for new components
         ├── button/
         │   ├── button.tsx
         │   └── button.md     ← Full component docs
@@ -234,7 +235,7 @@ your-repo/
 
 | Layer | Size | When AI Reads |
 |-------|------|---------------|
-| `DESIGN_SYSTEM.md` | ~3-4KB | Always (it's the entry point) |
+| `INDEX.md` | ~3-4KB | Always (it's the entry point) |
 | Component `.md` | ~2-3KB each | Only when that component is needed |
 | `patterns/*.md` | ~1-2KB each | Only for specific patterns |
 
@@ -247,7 +248,7 @@ your-repo/
 
 ### 1. Add to `.cursorrules` or Claude rules:
 ```
-Before implementing any UI component, ALWAYS read DESIGN_SYSTEM.md first.
+Before implementing any UI component, ALWAYS read INDEX.md first.
 Then navigate to and read the specific component's .md file before writing code.
 Never guess component APIs — always reference the documentation.
 ```
@@ -259,4 +260,4 @@ and components from @components/ui/modal/modal.md
 ```
 
 ### 3. Keep the index updated
-When you add components, add them to the registry table and relevant decision trees.
+When you add components, follow `MAINTENANCE.md` to update the registry and decision trees.

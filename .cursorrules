@@ -8,7 +8,7 @@ You are working in a project with a structured design system. Follow these rules
 
 After creating any new component, you MUST update all indexes.
 
-**Reference:** `_INDEX_UPDATE_RULES.md`
+**Reference:** `MAINTENANCE.md`
 
 This file tells you exactly:
 - Which files to update
@@ -24,7 +24,7 @@ This file tells you exactly:
 
 **Before implementing ANY UI component or pattern:**
 
-1. Read `DESIGN_SYSTEM.md` to understand the system
+1. Read `INDEX.md` to understand the system
 2. Use decision trees to identify the correct component
 3. Read the specific component's `.md` file completely
 4. Implement using documented patterns only
@@ -45,7 +45,7 @@ This file tells you exactly:
 
 ### Critical Checks Before Using Any Component
 
-- [ ] Did I check the decision tree in `DESIGN_SYSTEM.md`?
+- [ ] Did I check the decision tree in `INDEX.md`?
 - [ ] Did I read the component's `.md` file completely?
 - [ ] Did I check the "When NOT to use" section?
 - [ ] Did I review the edge cases and gotchas?
@@ -57,10 +57,10 @@ This file tells you exactly:
 
 | When you need to... | Reference this file |
 |---------------------|---------------------|
-| Find the right component | `DESIGN_SYSTEM.md` (decision trees) |
+| Find the right component | `INDEX.md` (decision trees) |
 | Understand a component | `components/ui/[name]/[name].md` |
-| Create a new component | `_component.template.md` |
-| Update indexes after creating | `_INDEX_UPDATE_RULES.md` |
+| Create a new component | `component.template.md` |
+| Update indexes after creating | `MAINTENANCE.md` |
 | Build a form | `patterns/forms.md` |
 | Handle deletion flow | `patterns/deletion.md` |
 | Add animations | `foundations/motion.md` |
@@ -69,9 +69,9 @@ This file tells you exactly:
 ### File Structure
 
 ```
-DESIGN_SYSTEM.md               ← Read FIRST (index + decision trees)
-_INDEX_UPDATE_RULES.md         ← Read when creating/modifying components
-_component.template.md         ← Template for new components
+INDEX.md                       ← Read FIRST (index + decision trees)
+MAINTENANCE.md                 ← Read when creating/modifying components
+component.template.md          ← Template for new components
 components/ui/[name]/[name].md ← Component details
 patterns/*.md                  ← Multi-component patterns
 foundations/motion.md          ← Animation guidelines

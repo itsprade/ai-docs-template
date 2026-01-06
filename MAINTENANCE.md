@@ -1,4 +1,4 @@
-# Index Update Rules
+# Maintenance Guide
 
 > ⚠️ **AI Instructions:** When a new component is created, you MUST update all locations listed below.
 > Do NOT skip any section. Follow the format exactly as shown in existing entries.
@@ -21,9 +21,9 @@ Reference this file when:
 When adding a new component, update these files in order:
 
 - [ ] 1. Create component `.md` file
-- [ ] 2. Update `DESIGN_SYSTEM.md` — Component Registry
-- [ ] 3. Update `DESIGN_SYSTEM.md` — Decision Tree (if applicable)
-- [ ] 4. Update `DESIGN_SYSTEM.md` — Common Patterns (if applicable)
+- [ ] 2. Update `INDEX.md` — Component Registry
+- [ ] 3. Update `INDEX.md` — Decision Tree (if applicable)
+- [ ] 4. Update `INDEX.md` — Common Patterns (if applicable)
 - [ ] 5. Update related component docs — Related Components table
 
 ---
@@ -32,7 +32,7 @@ When adding a new component, update these files in order:
 
 **Location:** `components/ui/[component-name]/[component-name].md`
 
-**Action:** Copy `_component.template.md` and fill in all sections.
+**Action:** Copy `component.template.md` and fill in all sections.
 
 **Required sections:**
 - Mental Model
@@ -50,7 +50,7 @@ When adding a new component, update these files in order:
 
 ## 2. Update Component Registry
 
-**Location:** `DESIGN_SYSTEM.md` → Component Registry section
+**Location:** `INDEX.md` → Component Registry section
 
 **Action:** Add a new row to the appropriate category table.
 
@@ -98,7 +98,7 @@ After:
 
 ## 3. Update Decision Trees
 
-**Location:** `DESIGN_SYSTEM.md` → Quick Decision Trees section
+**Location:** `INDEX.md` → Quick Decision Trees section
 
 **Action:** Add the component to relevant decision tree(s).
 
@@ -146,7 +146,7 @@ Action type?
 
 ## 4. Update Common Patterns
 
-**Location:** `DESIGN_SYSTEM.md` → Common Patterns section
+**Location:** `INDEX.md` → Common Patterns section
 
 **Action:** Add or update pattern entries if the component is used in common patterns.
 
@@ -223,14 +223,14 @@ Add to `components/ui/chip/chip.md` → Related Components:
 
 | Adding... | Update these files |
 |-----------|-------------------|
-| New primitive component | Registry (Primitives), Decision tree, Related components |
-| New layout component | Registry (Layout), Related components |
-| New feedback component | Registry (Feedback), Feedback decision tree, Related components |
-| New overlay component | Registry (Overlays), Overlay decision tree, Related components |
-| New data display component | Registry (Data Display), Content decision tree, Related components |
-| New navigation component | Registry (Navigation), Related components |
-| New composite component | Registry (Composite), Relevant decision trees, Common patterns, Related components |
-| New pattern | Common Patterns table, Create pattern `.md` file |
+| New primitive component | `INDEX.md` Registry (Primitives), Decision tree, Related components |
+| New layout component | `INDEX.md` Registry (Layout), Related components |
+| New feedback component | `INDEX.md` Registry (Feedback), Feedback decision tree, Related components |
+| New overlay component | `INDEX.md` Registry (Overlays), Overlay decision tree, Related components |
+| New data display component | `INDEX.md` Registry (Data Display), Content decision tree, Related components |
+| New navigation component | `INDEX.md` Registry (Navigation), Related components |
+| New composite component | `INDEX.md` Registry (Composite), Relevant decision trees, Common patterns, Related components |
+| New pattern | `INDEX.md` Common Patterns table, Create pattern `.md` file |
 
 ---
 
@@ -238,10 +238,10 @@ Add to `components/ui/chip/chip.md` → Related Components:
 
 After making updates, verify:
 
-- [ ] Component appears in Component Registry
+- [ ] Component appears in `INDEX.md` Component Registry
 - [ ] Component is in correct category
 - [ ] Path in registry matches actual file location
-- [ ] Added to relevant decision tree(s)
+- [ ] Added to relevant decision tree(s) in `INDEX.md`
 - [ ] Related components updated (both directions)
 - [ ] Alphabetical order maintained in registry
 - [ ] One-liner is concise and clear
@@ -255,16 +255,16 @@ After making updates, verify:
 
 ### Step 1: Create documentation
 ```
-components/ui/chip/chip.md  ← Copy from _component.template.md and fill in
+components/ui/chip/chip.md  ← Copy from component.template.md and fill in
 ```
 
-### Step 2: Update registry in DESIGN_SYSTEM.md
+### Step 2: Update registry in INDEX.md
 ```markdown
 ### Primitives
 | Chip | `components/ui/chip/chip.md` | Compact interactive element |
 ```
 
-### Step 3: Update decision tree in DESIGN_SYSTEM.md
+### Step 3: Update decision tree in INDEX.md
 ```markdown
 ### User needs to take an action
 ├── Compact toggleable action → Chip (components/ui/chip/chip.md)
