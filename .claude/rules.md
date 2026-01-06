@@ -1,0 +1,191 @@
+# Claude Rules — Design System
+
+You are assisting with a project that has a structured design system. These rules ensure consistent, high-quality UI implementation.
+
+---
+
+## When Creating New Components
+
+After creating any new component, you MUST update all indexes.
+
+**Reference:** `_INDEX_UPDATE_RULES.md`
+
+This file tells you exactly:
+- Which files to update
+- What format to follow
+- Where to add entries
+- How to update related components
+
+**Never skip index updates. Incomplete indexes break the system.**
+
+---
+
+## Primary Directive
+
+**Before implementing ANY UI component or pattern:**
+
+1. Read `DESIGN_SYSTEM.md` to understand the system
+2. Use decision trees to identify the correct component
+3. Read the specific component's `.md` file completely
+4. Implement using documented patterns only
+
+**Never guess. Never assume. Always reference.**
+
+---
+
+## Component Selection Process
+
+```
+1. Identify user need   → What is the user trying to do?
+2. Check decision tree  → Which component category fits?
+3. Read component doc   → Full context, props, and patterns
+4. Check alternatives   → Is there a better fit?
+5. Implement            → Using documented patterns exactly
+```
+
+### Critical Checks Before Using Any Component
+
+- [ ] Did I check the decision tree in `DESIGN_SYSTEM.md`?
+- [ ] Did I read the component's `.md` file completely?
+- [ ] Did I check the "When NOT to use" section?
+- [ ] Did I review the edge cases and gotchas?
+- [ ] Am I using the documented composition patterns?
+
+---
+
+## File Reference Guide
+
+| When you need to... | Reference this file |
+|---------------------|---------------------|
+| Find the right component | `DESIGN_SYSTEM.md` (decision trees) |
+| Understand a component | `components/ui/[name]/[name].md` |
+| Create a new component | `_component.template.md` |
+| Update indexes after creating | `_INDEX_UPDATE_RULES.md` |
+| Build a form | `patterns/forms.md` |
+| Handle deletion flow | `patterns/deletion.md` |
+| Add animations | `foundations/motion.md` |
+| Handle loading/empty states | `patterns/async-states.md` |
+
+### File Structure
+
+```
+DESIGN_SYSTEM.md               ← Read FIRST (index + decision trees)
+_INDEX_UPDATE_RULES.md         ← Read when creating/modifying components
+_component.template.md         ← Template for new components
+components/ui/[name]/[name].md ← Component details
+patterns/*.md                  ← Multi-component patterns
+foundations/motion.md          ← Animation guidelines
+```
+
+---
+
+## Code Quality Rules
+
+### DO ✓
+
+- Use decision trees to find the right component
+- Read the full `.md` file for any component you use
+- Follow composition patterns exactly as documented
+- Apply animation specs from component docs
+- Handle all edge cases mentioned in documentation
+- Use design tokens (`--space-4`, `--radius-md`, etc.)
+- Check "When NOT to use" before selecting a component
+- Match content guidelines (labels, copy, etc.)
+
+### DON'T ✗
+
+- Create custom components when system components exist
+- Guess component APIs without reading docs
+- Use different patterns than those documented
+- Skip animations or use different timing/easing
+- Ignore accessibility requirements in docs
+- Use hardcoded values instead of design tokens
+- Deviate from documented composition patterns
+- Assume you know how a component works
+
+---
+
+## Animation Standards
+
+Always check `foundations/motion.md` for details. Quick reference:
+
+| Type | Duration | Easing | Use For |
+|------|----------|--------|---------|
+| Micro (hover, active) | 100ms | ease-out | Button hover, toggles |
+| Small transitions | 150ms | ease-out | State changes |
+| UI transitions | 200ms | ease-out | Most component animations |
+| Overlays entering | 300ms | cubic-bezier(0.16, 1, 0.3, 1) | Modal, Sheet, Toast |
+| Page transitions | 400-500ms | ease-in-out | Route changes |
+
+---
+
+## Common Mistakes to Avoid
+
+1. **Using Modal for everything**
+   → Check if Sheet, Toast, or Popover fits better
+   
+2. **Skipping loading states**
+   → Always implement Skeleton/Spinner for async content
+   
+3. **Ignoring mobile behavior**
+   → Check responsive notes in component docs
+   
+4. **Wrong button variant**
+   → One primary per section, rest secondary/ghost
+   
+5. **Missing empty states**
+   → Always handle zero-data scenarios with EmptyState
+   
+6. **Custom implementations**
+   → Check if a system component exists first
+
+---
+
+## Response Format for UI Tasks
+
+When implementing UI, structure your response as:
+
+1. **Component Selection**
+   - Which component(s) you're using
+   - Why this is the right choice
+   - Reference to docs consulted
+
+2. **Pattern Reference**
+   - Which documentation guided the implementation
+   - Any relevant patterns being followed
+
+3. **Implementation**
+   - The actual code
+   - Following documented composition patterns
+
+4. **Notes**
+   - Edge cases handled
+   - Alternatives considered
+   - Any assumptions made
+
+---
+
+## When Uncertain
+
+If documentation doesn't cover a specific case:
+
+1. Check related components for similar patterns
+2. Look at edge cases in similar component docs
+3. Ask for clarification rather than guessing
+4. Default to simpler, more standard solutions
+5. Note assumptions clearly
+
+---
+
+## Quality Checklist
+
+Before completing any UI implementation:
+
+- [ ] Used decision tree to find component
+- [ ] Read the component's full `.md` file
+- [ ] Checked "When NOT to use" section
+- [ ] Following documented composition patterns
+- [ ] Applied correct animation presets
+- [ ] Handled documented edge cases
+- [ ] Using design tokens (no hardcoded values)
+- [ ] Accessibility requirements met
